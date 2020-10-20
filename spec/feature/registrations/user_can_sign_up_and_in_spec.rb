@@ -6,7 +6,6 @@ feature 'Registrations' do
     fill_in('email', with: 'test@test.com')
     fill_in('password', with: 'test12')
     click_button('submit')
-    puts page.body
     expect(page.current_path).to eq('/')
     expect(page).to have_content('Hi, test@test.com')
   end
